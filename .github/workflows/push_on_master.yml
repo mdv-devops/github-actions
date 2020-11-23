@@ -1,6 +1,6 @@
 name: my-first-CI/CD-action
 env:
-  APLICATION_NAME        : "Flask aplication"
+  APPLICATION_NAME        : "Flask aplication"
   DEPLOYMENT_PACKAGE_NAME: "Deployment Flask package ver-${{ github.sha }}"
 
 on:
@@ -10,8 +10,8 @@ jobs:
   testing:
     runs-on: ubuntu-latest
     steps:
-      - name: "Aplcation name"
-        run : echo ${{ APLICATION_NAME }}
+      - name: "Applcation name"
+        run : echo ${{ env.APPLICATION_NAME }}
         
       - name: "Listing directory"
         run : ls -la
@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Package name"
-        run: echo ${{ DEPLOYMENT_PACKAGE_NAME }}
+        run: echo ${{ env.DEPLOYMENT_PACKAGE_NAME }}
       - name: "Copy full project"
         uses: actions/checkout@v2
          

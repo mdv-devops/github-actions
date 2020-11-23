@@ -32,7 +32,7 @@ jobs:
         run : echo "Hello MDV-unre from Git-action"
         
       - name: "Check index.html"
-        run : cat ./template/index.html  
+        run : cat /home/runner/work/github-actions/github-actions/template/index.html  
       
       
   

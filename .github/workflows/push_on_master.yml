@@ -26,13 +26,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Copy full project"
-        uses: action/checout@v2
+        uses: action/checkout@v2
          
       - name: "Printing Hollo message"
         run : echo "Hello MDV-unre from Git-action"
         
       - name: "Check index.html"
-        run : cat ~/template/index.html  
+        run : cat ./template/index.html  
       
       
   

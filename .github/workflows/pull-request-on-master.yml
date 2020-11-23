@@ -1,6 +1,6 @@
 name: Pull-request-test
 env:
-  WORKDIR_PATH: "cat pwd.txt" 
+  WORKDIR_PATH: "$PWD" 
 on:
   pull_request:
     branches: [ master ]
@@ -13,6 +13,8 @@ jobs:
       - name: "run few commands"  
         run: |
           pwd | tee pwd.txt
+          ls -la
+          cat pwd.txt
       - name: "Check index file"
         run : cat ${{ env.WORKDIR_PATH }}/templates/index.html    
               

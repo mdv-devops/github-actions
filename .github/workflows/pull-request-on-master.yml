@@ -13,7 +13,8 @@ jobs:
       - name: "run few commands"  
         run: |
           pwd | tee pwd.txt
-          apt-get update && apt-get upgrade
+          ls -la
+          cat pwd.txt
       - name: "Check index file"
         run : cat ${{ env.WORKDIR_PATH }}/templates/index.html    
               

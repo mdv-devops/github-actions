@@ -1,0 +1,40 @@
+name: my-first-CI/CD-action
+on:
+  push:
+    branches: [ master ]
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Listing directory"
+        run : ls -la
+      
+      - name: "Copy full project"  
+        uses: actions/checkout@v2
+      
+      - name: "Listing directory 2"
+        run : ls -la
+      
+      - name: "Checking AWS status"
+        run : aws --version
+    
+      - name: "Checking zip status"  
+        run : zip --version
+      
+  deployment:
+    needs: [testing]
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Copy full project"
+        uses: action/checout@v2
+         
+      - name: "Printing Hollo message"
+        run : echo "Hello MDV-unre from Git-action"
+        
+      - name: "Check index.html"
+        run : cat ~/template/index.html  
+      
+      
+  
+  
+    

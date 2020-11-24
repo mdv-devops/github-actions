@@ -43,7 +43,7 @@ jobs:
           application_name: ${{ env.EB_APPLICATION_NAME }}
           environment_name: ${{ env.EB_ENVIRONMENT_NAME }}
           version_label: Ver-${{ steps.format-time.outputs.replaced }}
-          deployment_package: ${{ evn.DEPLOY_PACKAGE_NAME }}
+          deployment_package: ${{ env.DEPLOY_PACKAGE_NAME }}
      
       - name: "Print Message for CD-part finish"
         run : echo "CD-part finished successfully"

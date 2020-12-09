@@ -1,6 +1,6 @@
 name: CI/CD-pipeline-AWS-ElasticBeanstalk
 env:
-  EB_PACKAGE_S3_BUCKET_NAME: "mdv.repository"
+  EB_PACKAGE_S3_BUCKET_NAME: "elasticbeanstalk-us-east-1-707711651730"
   EB_APPLICATION_NAME      : "Flask-web-page"
   EB_ENVIRONMENT_NAME      : "FlaskWebPage-env"
   DEPLOY_PACKAGE_NAME      : "flask_app_${{ github.sha }}.zip"

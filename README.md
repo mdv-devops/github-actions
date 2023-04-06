@@ -1,9 +1,8 @@
-# GitHub Actions deploy Flask to AWS Elastic Beanstalk
+# GitHub Actions test workflow
 
 
-Status of Last Deployment:<br>
-<img src="https://github.com/MDV-unre/github-actions/workflows/CI/CD-pipeline-AWS-ElasticBeanstalk/badge.svg?branch=master"><br>
+[![CI/CD-pipeline-AWS-ElasticBeanstalk](https://github.com/mdv-devops/github-actions/actions/workflows/main.yml/badge.svg)](https://github.com/mdv-devops/github-actions/actions/workflows/main.yml)
 
+[![Cleanup old branches](https://github.com/mdv-devops/github-actions/actions/workflows/delete-old-branches.yaml/badge.svg)](https://github.com/mdv-devops/github-actions/actions/workflows/delete-old-branches.yaml)
 
-
-Copyleft by MDV-unre 2020.
+[![nightly artifacts cleanup](https://github.com/mdv-devops/github-actions/actions/workflows/artifact-clieanup.yaml/badge.svg)](https://github.com/mdv-devops/github-actions/actions/workflows/artifact-clieanup.yaml)
